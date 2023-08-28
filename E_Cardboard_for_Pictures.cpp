@@ -32,4 +32,4 @@ int main(){
     return 0;
 }
 //* what i learnt
-//* akta range er middle value k probable value dhore ota ke perfect korar jonno while loop chaliechhi;
+//* akta range er middle value k w(final ans) er probable value dhore ota ke perfect korar jonno while loop chaliechhi;
