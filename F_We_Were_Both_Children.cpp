@@ -18,22 +18,22 @@ int main(){
         }
         /*
         ?for first test case
-        *for i=1
+        *for i=1//1cm laf er bang achhe akta r eder jonno nicher trap
         mp[1]=mp[1]+a[1]=0+1=1
         mp[2]=mp[2]+a[1]=0+1=1
         mp[3]=mp[3]+a[1]=0+1=1
         mp[4]=mp[4]+a[1]=0+1=1
-        *for i=2
+        *for i=2//2cm laf er bang achhe akta r eder jonno nicher trap
         mp[2]=mp[2]+a[2]=1+1=2
         mp[4]=mp[4]+a[2]=1+1=2
         mp[6]=mp[6]+a[2]=0+1=1
         mp[8]=mp[8]+a[2]=0+1=1
-        *for i=3
+        *for i=3//3cm laf er bang achhe akta r eder jonno nicher trap
         mp[3]=mp[3]+a[3]=1+1=2
         mp[6]=mp[6]+a[3]=1+1=2
         mp[9]=mp[9]+a[3]=0+1=1
         mp[12]=mp[12]+a[3]=0+1=1
-        *for i=4
+        *for i=4//4cm laf er bang achhe akta r eder jonno nicher trap
         mp[4]=mp[4]+a[4]=2+1=3
         mp[8]=mp[8]+a[4]=1+1=2
         mp[12]=mp[12]+a[4]=0+1=1
@@ -64,33 +64,7 @@ int main(){
 }
 
 
-
-
-// void solve()
-// {
-//     ll n;cin>>n;
-//     vector<ll>v(n+1,0);
-//     map<int,int>mp;
-//     for (int i = 0; i < n; ++i)
-//     {
-//     	int temp;cin>>temp;
-//     	if(temp<=n)
-//     	v[temp]++;
-//     }
-    
-//     for(int i=1;i<=n;i++)
-//     {
-//     	for(int j=i;j<=n;j+=i)
-//     	{
-//     		mp[j]+=v[i];
-//     	}
-//     }
-//     int mx=0;
-//     for(auto i : mp)
-//     {
-//     	if(i.first<=n)
-//     	mx=max(mx,i.second);
-//     }
-//     cout<<mx<<endl;
-// }
- 
+//*what i learnt
+// k koto poriman laf dite pare oi frog er poriman ber korse
+// ak dhoroner lafer jonno koita kore kon kon jaigai trap dite hobe seta ber korse
+// j j trap mile  
