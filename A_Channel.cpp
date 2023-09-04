@@ -6,7 +6,7 @@ int main(){
     int t;cin>>t;
     while(t--){
         int x,y,n,p;cin>>x>>y>>n;
-        int pos=0,neg=0;
+        int pos=0;
         string s;cin>>s;
         bool flag=false;
         p=y;
