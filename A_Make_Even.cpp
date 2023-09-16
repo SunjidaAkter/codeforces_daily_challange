@@ -5,19 +5,18 @@ typedef pair<int,int>pii;
 int main(){
     int q;cin>>q;
     while(q--){
-        int x;cin>>x;
-        if(x%2==0)cout<<0<<endl;
-        else{
-            if(x%10==x)cout<<-1<<endl;
-            else {
-                int y=2;
-                vector<int>v;
-                // while(x%10!=0)v.push_back(x)
-                // while(x%2!=0){
-
-                // }
+        string s;cin>>s;
+        int d=-1;
+        for(int i=0;i<s.size();i++){
+            if((s[i]-'0')%2==0){
+                d=i;
+                break;
             }
         }
+        if((s[s.size()-1]-'0')%2==0)cout<<0<<endl;
+        else if(d==-1)cout<<-1<<endl;
+        else if(d==0)cout<<1<<endl;
+        else cout<<2<<endl;
     }
     return 0;
 }
