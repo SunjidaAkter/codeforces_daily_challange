@@ -14,10 +14,10 @@ int main(){
         for(int i=0;i<s.length();i++){
             if(s[i]>=b||f){
                 cout<<s[i];
-                }else{
-                    cout<<b<<s[i];
-                    f=1;
-               }
+            }else{
+                cout<<b<<s[i];
+                f=1;
+            }
         }
         if(!f){
             cout<<b;
