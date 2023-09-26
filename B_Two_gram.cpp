@@ -15,13 +15,15 @@ int main(){
         st[{prev,c}]++;
         prev=c;
     }
-    int mx=INT_MIN;vector<pcc>ss;
+    int mx=INT_MIN;
+    char a,b;
     for(auto it=st.begin();it!=st.end();it++){
         if(mx<it->second){
             mx=it->second;
-            ss.push_back(it->first);
+            a=it->first.first;
+            b=it->first.second;
         }
     }
-    cout<<ss[ss.size()-1].first<<ss[ss.size()-1].second;
+    cout<<a<<b;
     return 0;
 }
