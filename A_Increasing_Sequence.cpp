@@ -6,15 +6,16 @@ int main(){
     int q;cin>>q;
     while(q--){
         int n;cin>>n;
-        vector<int>a(n);
+        int a[n];
+        vector<int>v(n);
         for(int i=0;i<n;i++)cin>>a[i];
-        sort(a.begin(),a.end());
-        vector<int>b(n);b[0]=1;
-        for(int i=1;i<n;i++){
-            b[i]=max(a[i],b[i-1]+1);
-            cout<<b[i]<<" ";
+        int j=1;
+        for(int i=0;i<n;i++){
+            while(a[i]==j)j++;
+            v[i]=j;
+            j++;
         }
-        cout<<b[n-1]+1<<endl;
+        cout<<v[v.size()-1]<<endl;
     }
     return 0;
 }
