@@ -10,10 +10,34 @@ using namespace std;
 typedef pair<ll,ll>pii;
 #define forl(var,str,end) for(long long int var=str; var<end; var++)
 void solve(){
-    int n;cin>>n;
-    int a[n];
+    ll n;cin>>n;
+    ll a[n];
+    vector<ll>v;
     forl(i,0,n)cin>>a[i];
-    forl(i,0,n)cout<<i+1<<" ";
+    ll ans;
+    forl(i,0,n){
+        v.pub(i+1);
+    }
+    // v.erase(v.begin()+3-1);
+    // forl(i,0,v.size()){
+    //     cout<<a[i]<<" l ";
+    // }
+    forl(i,0,n){
+        ll j=0,mx=-1;
+        // cout<<v[i]<<" l ";
+        while(j<v.size()){
+            // cout<<j;
+    //         // j++;
+            if(mx<abs(v[j]-a[i])){
+                mx=abs(v[j]-a[i]);
+                ans=v[j];
+            }
+
+            j++;
+        }
+        v.erase(v.begin()+ans-1);
+        cout<<ans<<" ";
+    }
     cout<<endl;
 }
 int main(){
