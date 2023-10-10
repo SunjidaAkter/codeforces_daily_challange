@@ -3,44 +3,38 @@ using namespace std;
 #define ll long long
 #define pub push_back
 #define pob pop_back
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
-#define Yes cout << "Yes" << endl
-#define No cout << "No" << endl
-typedef pair<ll,ll>pii;
-#define forl(var,str,end) for(long long int var=str; var<end; var++)
+#define nl  '\n'
+#define yes cout << "YES" << nl
+#define no cout << "NO" << nl
+#define Yes cout << "Yes" << nl
+#define No cout << "No" << nl
+#define forl(ty,var,str,end) for(ty var=str; var<end; var++)
+#define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
+typedef pair<int,int>pii;
+bool cmp(pii a,pii b){
+    return a.second<b.second;
+}
 void solve(){
-    ll n;cin>>n;
-    ll a[n];
-    vector<ll>v;
-    forl(i,0,n)cin>>a[i];
-    ll ans;
-    forl(i,0,n){
-        v.pub(i+1);
+    int n;cin>>n;
+    vector<pii>a;   
+    vector<int>v;
+    forl(int,i,0,n){
+        int x;cin>>x;
+        a.push_back({x,i});
+        v.push_back(n-i);
+    }   
+    sort(a.begin(),a.end());
+    forl(int,i,0,n){
+        a[i].first=v[i];
     }
-    // v.erase(v.begin()+3-1);
-    // forl(i,0,v.size()){
-    //     cout<<a[i]<<" l ";
-    // }
-    forl(i,0,n){
-        ll j=0,mx=-1;
-        // cout<<v[i]<<" l ";
-        while(j<v.size()){
-            // cout<<j;
-    //         // j++;
-            if(mx<abs(v[j]-a[i])){
-                mx=abs(v[j]-a[i]);
-                ans=v[j];
-            }
-
-            j++;
-        }
-        v.erase(v.begin()+ans-1);
-        cout<<ans<<" ";
+    sort(a.begin(),a.end(),cmp);   
+    forl(int,i,0,n){
+        cout<<a[i].first<<" ";
     }
-    cout<<endl;
+    cout<<nl;   
 }
 int main(){
+    FAST;
     int t;cin>>t;
     while(t--){
         solve();
